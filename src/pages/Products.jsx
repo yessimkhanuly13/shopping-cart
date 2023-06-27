@@ -1,6 +1,8 @@
 import React from 'react'
 import { useEffect, useState} from 'react';
 import Navbar from '../components/Navbar';
+import Item from '../components/Item';
+import './styles/products.css'
 
 function Products() {
     const [data, setData] = useState([]);
@@ -21,9 +23,11 @@ function Products() {
   return (
     <div>
         <Navbar/>
-        {data.map((el)=>(
-        <li>{el.price}</li>
-      ))}
+        <div className='Products'>
+            {data.map((el)=>(
+                <Item data={el}/>
+            ))}
+        </div>
     </div>
   )
 }

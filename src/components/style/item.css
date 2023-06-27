@@ -1,0 +1,13 @@
+.Item{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    width: 30vw;
+    height: 40vh;
+    justify-content: space-between;
+}
+
+.Item img{
+    width: 10vw;
+    height: 20vh;
+}
