@@ -1,0 +1,33 @@
+*{
+    width: 100%;
+    text-align: center;
+}
+
+.Navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+    height: 12vh;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.Navbar img{
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+a{
+    text-decoration: none;
+    width: 5vw;
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header{
+    font-size: 2rem;
+    font-weight: bold;
+}

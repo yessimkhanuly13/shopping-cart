@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App'
-import Profile from './Profile'
+import Profile from './components/Profile'
 
 function RouteSwitch() {
   return (
