@@ -10,7 +10,7 @@ function Navbar() {
         </div>
         <div className='links'>
             <a href='/'>Home</a>
-            <a href='/'>Products</a>
+            <a href='/product'>Products</a>
             <a href='/'>Contact</a>
             <a href='/profile'><img src={cart} alt='cart'/></a>
         </div>
