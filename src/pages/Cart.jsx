@@ -1,8 +1,17 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
-function Cart() {
+function Cart({items}) {
   return (
-    <div>Cart</div>
+    <div>
+      <Navbar/>
+      {
+        items.map((e)=>(
+          <li>{e.title}</li>
+        ))
+      }
+      <button onClick={()=>{console.log(items)}}>click</button>
+    </div>
   )
 }
 

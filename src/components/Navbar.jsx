@@ -1,18 +1,18 @@
 import React from 'react'
 import './style/navbar.css'
 import cart from './assets/grocery-store.png'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
     <div className='Navbar'>
         <div className='header'>
-            <a href='/'>Shopping Cart</a>
+            <Link to='/'>Shopping Cart</Link>
         </div>
         <div className='links'>
-            <a href='/'>Home</a>
-            <a href='/product'>Products</a>
-            <a href='/'>Contact</a>
-            <a href='/profile'><img src={cart} alt='cart'/></a>
+            <Link to="/product">Products</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to='/cart'><img src={cart} alt='cart'/></Link>
         </div>
     </div>
   )

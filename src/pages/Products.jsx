@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Item from '../components/Item';
 import './styles/products.css'
 
-function Products() {
+function Products({add}) {
     const [data, setData] = useState([]);
 
   const fetchData = async()=>{
@@ -25,7 +25,7 @@ function Products() {
         <Navbar/>
         <div className='Products'>
             {data.map((el)=>(
-                <Item data={el}/>
+                <Item data={el} add={add}/>
             ))}
         </div>
     </div>

@@ -10,6 +10,10 @@
     height: 12vh;
     align-items: center;
     font-size: 1.3rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: aliceblue;
+    color: black;
+    margin-bottom: 2rem;
 }
 
 .Navbar img{
@@ -19,7 +23,7 @@
 
 a{
     text-decoration: none;
-    width: 5vw;
+    color: black;
 }
 
 .links{
