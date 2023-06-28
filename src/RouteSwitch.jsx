@@ -10,7 +10,14 @@ function RouteSwitch() {
   const [items, setItems] = useState([]);
   
   const addToCart = (item) =>{
-    setItems((prevItems)=>[...prevItems, item]);
+    const a = items.filter((e)=> e.id === item.id);
+
+    if(a.length !== 0){
+      console.log(a)
+    }else{
+      setItems((prevItems)=>[...prevItems, item]);
+    }
+    
   }
 
   useEffect(()=>{

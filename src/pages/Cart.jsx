@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Item from '../components/Item'
 
 function Cart({items}) {
   return (
@@ -7,10 +8,9 @@ function Cart({items}) {
       <Navbar/>
       {
         items.map((e)=>(
-          <li>{e.title}</li>
+          <Item data={e}/>
         ))
       }
-      <button onClick={()=>{console.log(items)}}>click</button>
     </div>
   )
 }

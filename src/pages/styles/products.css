@@ -1,7 +1,13 @@
 .Products{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     place-items: center;
     align-items: center;
     gap: 1vw;
+    margin-bottom: 2rem;
+}
+
+.Productsgrid{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
 }

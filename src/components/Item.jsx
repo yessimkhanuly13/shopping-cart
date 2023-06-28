@@ -6,9 +6,11 @@ function Item({data, add}) {
     <div className='Item'>
       <div className='item-id'>
         <p>{data.title}</p>
-        <p>{data.price}$</p>
         <img src={data.image} alt='img'/>
-        <button onClick={()=>{add(data)}}>Add to cart</button>
+      </div>
+      <div>
+      <p>{data.price}$</p>
+      <button onClick={()=>{add(data)}}>Add to cart</button>
       </div>
     </div>
   )

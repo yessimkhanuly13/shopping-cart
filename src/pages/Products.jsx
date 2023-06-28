@@ -21,14 +21,25 @@ function Products({add}) {
   },[])
 
   return (
-    <div>
+    <>
         <Navbar/>
-        <div className='Products'>
-            {data.map((el)=>(
-                <Item data={el} add={add}/>
-            ))}
+        <div className="Productsgrid">
+          <div className='sidebar'>
+            categories
+              <li>jewelery</li>
+              <li>electronics</li>
+              <li>men's clothing</li>
+              <li>women's clothing</li>
+              price range
+              <input type="range" />
+            </div>
+          <div className='Products'>
+              {data.map((el)=>(
+                  <Item data={el} add={add}/>
+              ))}
+          </div>
         </div>
-    </div>
+    </>
   )
 }
 
