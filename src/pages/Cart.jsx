@@ -5,7 +5,6 @@ import Item from '../components/Item'
 function Cart({items}) {
   return (
     <div>
-      <Navbar/>
       {
         items.map((e)=>(
           <Item data={e}/>

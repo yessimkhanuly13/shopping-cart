@@ -22,7 +22,6 @@ function Products({add}) {
 
   return (
     <>
-        <Navbar/>
         <div className="Productsgrid">
           <div className='sidebar'>
             categories

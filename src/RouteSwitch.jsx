@@ -4,6 +4,7 @@ import App from './App'
 import Products from './pages/Products'
 import Cart from './pages/Cart'
 import Contact from './pages/Contact'
+import Navbar from './components/Navbar'
 
 function RouteSwitch() {
   
@@ -27,6 +28,7 @@ function RouteSwitch() {
   return (
     <>
       <BrowserRouter>
+        <Navbar/>
           <Routes>
               <Route path='/' element={<App/>}/>
               <Route path='/contact' element={<Contact/>}/>
