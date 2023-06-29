@@ -1,12 +1,12 @@
 import React from 'react'
-import Item from '../components/Item'
+import CartItems from '../components/CartItems'
 
 function Cart({items}) {
   return (
     <div>
       {
         items.map((e)=>(
-          <Item data={e}/>
+          <CartItems data={e}/>
         ))
       }
     </div>

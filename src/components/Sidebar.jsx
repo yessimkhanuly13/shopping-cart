@@ -4,14 +4,11 @@ import './style/sidebar.css'
 function Sidebar({handleCategory}) {
   return (
     <div className='sidebar'>
-            categories
-            <li onClick={()=>{handleCategory("")}}>all</li>
-              <li onClick={()=>{handleCategory("jewelery")}}>jewelery</li>
-              <li onClick={()=>{handleCategory("electronics")}}>electronics</li>
-              <li onClick={()=>{handleCategory("men's clothing")}}>men's clothing</li>
-              <li onClick={()=>{handleCategory("women's clothing")}}>women's clothing</li>
-              price range
-              <input type="range" />
+            <li onClick={()=>{handleCategory("")}}>All</li>
+            <li onClick={()=>{handleCategory("jewelery")}}>Jewelery</li>
+            <li onClick={()=>{handleCategory("electronics")}}>Electronics</li>
+            <li onClick={()=>{handleCategory("men's clothing")}}>Men's clothing</li>
+            <li onClick={()=>{handleCategory("women's clothing")}}>Women's clothing</li>
     </div>
   )
 }

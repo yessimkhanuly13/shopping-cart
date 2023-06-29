@@ -8,9 +8,9 @@ function Products({add}) {
     const [data, setData] = useState([]);
     const [category, setCategory] = useState('');
 
-    const handleCategory = (category) =>{
+  const handleCategory = (category) =>{
       setCategory(category);
-    }
+  }
 
   const fetchData = async()=>{
     const res = await fetch("https://fakestoreapi.com/products");
@@ -18,6 +18,7 @@ function Products({add}) {
     console.log(resData);
     setData(resData)
   }
+
 
   const filteredData = category ? data.filter((el)=> el.category === category) : data;
 
