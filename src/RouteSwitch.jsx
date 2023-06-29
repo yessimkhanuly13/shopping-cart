@@ -16,9 +16,18 @@ function RouteSwitch() {
   
   const addToCart = (item) =>{
     
-    setItems((prevItems)=>[...prevItems, item]);
-    setCount(items.length+1);
-    
+    if(items.includes(item)){
+
+    }else{
+      setItems((prevItems)=>[...prevItems, item]);
+      setCount(items.length+1);
+    }    
+  }
+
+  const removeFromCart = (item) =>{
+      const arr = items.filter((el) => el.id !== item.id);
+      setCount(items.length-1);
+      setItems(arr)
   }
 
   useEffect(()=>{
@@ -35,7 +44,7 @@ function RouteSwitch() {
                 <Route path='/' element={<App/>}/>
                 <Route path='/contact' element={<Contact/>}/>
                 <Route path='/product'element={<Products add={addToCart}/>} />
-                <Route path='/cart' element={<Cart items={items}/>}/>
+                <Route path='/cart' element={<Cart items={items} removeFromCart={removeFromCart}/>}/>
             </Routes>
         </BrowserRouter>
       </Count.Provider>
