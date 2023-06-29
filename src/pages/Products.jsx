@@ -1,8 +1,8 @@
 import React from 'react'
 import { useEffect, useState} from 'react';
-import Navbar from '../components/Navbar';
 import Item from '../components/Item';
 import './styles/products.css'
+import Sidebar from '../components/Sidebar';
 
 function Products({add}) {
     const [data, setData] = useState([]);
@@ -23,15 +23,7 @@ function Products({add}) {
   return (
     <>
         <div className="Productsgrid">
-          <div className='sidebar'>
-            categories
-              <li>jewelery</li>
-              <li>electronics</li>
-              <li>men's clothing</li>
-              <li>women's clothing</li>
-              price range
-              <input type="range" />
-            </div>
+          <Sidebar data={data}/>
           <div className='Products'>
               {data.map((el)=>(
                   <Item data={el} add={add}/>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import Item from '../components/Item'
 
 function Cart({items}) {
