@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import Navbar from './components/Navbar'
 
 export const Count = createContext();
+export const SetCount = createContext();
 
 function RouteSwitch() {
   
@@ -26,6 +27,7 @@ function RouteSwitch() {
 
   return (
     <>
+    <SetCount.Provider value={setCount}>
       <Count.Provider value={count}>
         <BrowserRouter>
           <Navbar/>
@@ -37,6 +39,7 @@ function RouteSwitch() {
             </Routes>
         </BrowserRouter>
       </Count.Provider>
+      </SetCount.Provider>
     </>
   )
 }
