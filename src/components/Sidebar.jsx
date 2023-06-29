@@ -1,14 +1,15 @@
 import React from 'react'
 import './style/sidebar.css'
 
-function Sidebar({data}) {
+function Sidebar({handleCategory}) {
   return (
     <div className='sidebar'>
             categories
-              <li onClick={()=>{console.log(data[1].category)}}>jewelery</li>
-              <li>electronics</li>
-              <li>men's clothing</li>
-              <li>women's clothing</li>
+            <li onClick={()=>{handleCategory("")}}>all</li>
+              <li onClick={()=>{handleCategory("jewelery")}}>jewelery</li>
+              <li onClick={()=>{handleCategory("electronics")}}>electronics</li>
+              <li onClick={()=>{handleCategory("men's clothing")}}>men's clothing</li>
+              <li onClick={()=>{handleCategory("women's clothing")}}>women's clothing</li>
               price range
               <input type="range" />
     </div>

@@ -26,16 +26,16 @@ function RouteSwitch() {
 
   return (
     <>
-    <Count.Provider value={count}>
-      <BrowserRouter>
-        <Navbar/>
-          <Routes>
-              <Route path='/' element={<App/>}/>
-              <Route path='/contact' element={<Contact/>}/>
-              <Route path='/product'element={<Products add={addToCart}/>} />
-              <Route path='/cart' element={<Cart items={items}/>}/>
-          </Routes>
-      </BrowserRouter>
+      <Count.Provider value={count}>
+        <BrowserRouter>
+          <Navbar/>
+            <Routes>
+                <Route path='/' element={<App/>}/>
+                <Route path='/contact' element={<Contact/>}/>
+                <Route path='/product'element={<Products add={addToCart}/>} />
+                <Route path='/cart' element={<Cart items={items}/>}/>
+            </Routes>
+        </BrowserRouter>
       </Count.Provider>
     </>
   )
