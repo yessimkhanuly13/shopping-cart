@@ -1,24 +1,25 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import './style/cartitems.css'
 import { Count, SetCount } from '../RouteSwitch';
 
-function CartItems({data, removeFromCart, calcTotal, rmTotal}) {
-    const [amount, setAmount] = useState(1);
+function CartItems({data, removeFromCart, setTotal}) {
     const setCount = useContext(SetCount)
     const count = useContext(Count)
-    // calcTotal(data.price);
     const increment = () =>{
-        setAmount(amount + 1);
+        // setTotal((prevTotal)=>prevTotal - amount * data.price)
         setCount(count+1);
+        setTotal((prevTotal)=> prevTotal + data.price)
+        data.quantity++;
         // calcTotal(data.price);
+        console.log(data.quantity)
     }
     const decrement = () =>{
-        if(amount > 1){
-            setAmount(amount - 1)
+        if(data.quantity > 1){
             setCount(count-1);
+            data.quantity--;
             // rmTotal(data.price)
         }
-        if(amount === 1){
+        if(data.quantity === 1){
             // rmTotal(data.price)
             removeFromCart(data)
         }
@@ -31,7 +32,7 @@ function CartItems({data, removeFromCart, calcTotal, rmTotal}) {
         {/* <img src="" alt="" /> */}
         <div className='bot-block'>
             <button onClick={()=>{increment()}}>add</button>
-            <p>{amount}</p>
+            <p>{data.quantity}</p>
             <button onClick={()=>{decrement()}}>remove</button>
         </div>
     </div>

@@ -15,12 +15,14 @@ function RouteSwitch() {
   const [count, setCount] = useState(0);
   
   const addToCart = (item) =>{
-    
-    if(items.includes(item)){
-
+    const itemIndex = items.findIndex((i) => i.id === item.id);
+    if(itemIndex !== -1){
+      item.quantity++;
+      setCount((prevCount)=>prevCount+1);
     }else{
-      setItems((prevItems)=>[...prevItems, item]);
-      setCount(items.length+1);
+      const updatedItem = {...item, quantity:1}
+      setItems((prevItems)=>[...prevItems, updatedItem]);
+      setCount((prevCount)=>prevCount+1);
     }    
   }
 
