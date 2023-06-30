@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import CartItems from '../components/CartItems'
+import './styles/cart.css'
 
 function Cart({items, removeFromCart}) {
   const [total, setTotal] = useState(0);
@@ -17,13 +18,13 @@ function Cart({items, removeFromCart}) {
   },[items])
 
   return (
-    <div>
-      <p>Total: {total}$</p>
+    <div className='Cart'>
       {
         items.map((e)=>(
           <CartItems data={e} removeFromCart={removeFromCart} setTotal={setTotal}/>
         ))
       }
+      <p className='total-price'>Total: ${total}</p>
     </div>
   )
 }

@@ -3,11 +3,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid;
-    margin-bottom: 2rem;
+    width: 35rem;
+}
+
+.cartitems img{
+    width: 5rem;
+    height: 5rem;
 }
 
 .bot-block{
     display: flex;
     width: 10rem;
+}
+
+.btn-inc-dec{
+    background-color: inherit;
+    border: none;
+    width: 2rem;
 }

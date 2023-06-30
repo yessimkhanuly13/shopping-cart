@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello, from App <a href="/profile">profile </a></h1>
+      <Link to="/product"><button className='btn-start'>Get started</button></Link>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import './style/cartitems.css'
 import { Count, SetCount } from '../RouteSwitch';
+import { FaMinus, FaPlus } from 'react-icons/fa'
 
 function CartItems({data, removeFromCart, setTotal}) {
     const setCount = useContext(SetCount)
@@ -27,12 +28,12 @@ function CartItems({data, removeFromCart, setTotal}) {
   return (
     <div className='cartitems'>
         <p>{data.title}</p>
-        <p>{data.price}$</p>
-        {/* <img src="" alt="" /> */}
+        <p>${data.price}</p>
+        <img src={data.image} alt="" />
         <div className='bot-block'>
-            <button onClick={()=>{increment()}}>add</button>
+            <button className='btn-inc-dec' onClick={()=>{increment()}}><FaPlus/></button>
             <p>{data.quantity}</p>
-            <button onClick={()=>{decrement()}}>remove</button>
+            <button className='btn-inc-dec' onClick={()=>{decrement()}}><FaMinus/></button>
         </div>
     </div>
   )
