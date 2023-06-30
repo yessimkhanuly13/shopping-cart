@@ -11,16 +11,15 @@ function CartItems({data, removeFromCart, setTotal}) {
         setTotal((prevTotal)=> prevTotal + data.price)
         data.quantity++;
         // calcTotal(data.price);
-        console.log(data.quantity)
     }
     const decrement = () =>{
-        if(data.quantity > 1){
+        if(data.quantity >= 1){
             setCount(count-1);
             data.quantity--;
-            // rmTotal(data.price)
+            console.log(data.quantity)
+            setTotal((prevTotal)=>prevTotal - data.price)
         }
-        if(data.quantity === 1){
-            // rmTotal(data.price)
+        if(data.quantity < 1){
             removeFromCart(data)
         }
     }

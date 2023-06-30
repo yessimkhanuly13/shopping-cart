@@ -17,7 +17,12 @@ function RouteSwitch() {
   const addToCart = (item) =>{
     const itemIndex = items.findIndex((i) => i.id === item.id);
     if(itemIndex !== -1){
-      item.quantity++;
+      const updatedItems = [...items];
+      updatedItems[itemIndex] = {
+        ...updatedItems[itemIndex],
+        quantity: updatedItems[itemIndex].quantity + 1
+      }
+      setItems(updatedItems);
       setCount((prevCount)=>prevCount+1);
     }else{
       const updatedItem = {...item, quantity:1}
@@ -28,12 +33,12 @@ function RouteSwitch() {
 
   const removeFromCart = (item) =>{
       const arr = items.filter((el) => el.id !== item.id);
-      setCount(items.length-1);
+      console.log(arr);
       setItems(arr)
   }
 
   useEffect(()=>{
-    console.log(items)
+ 
   },[items])
 
   return (
