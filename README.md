@@ -1,4 +1,4 @@
-# Memory-card
+# Shopping cart
 
 > - [Live Demo](https://shopping-cart-dun-nine.vercel.app/) :convenience_store:
 
