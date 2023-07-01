@@ -8,7 +8,7 @@
 
 ```bash
 git clone https://github.com/yessimkhanuly13/shopping-cart.git
-cd memory-card
+cd shopping-cart
 npm install
 npm start
 ```
