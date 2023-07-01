@@ -7,12 +7,12 @@
 ### Installing and running
 
 ```bash
-git clone https://github.com/yessimkhanuly13/memory-card.git
+git clone https://github.com/yessimkhanuly13/shopping-cart.git
 cd memory-card
 npm install
 npm start
 ```
-
+a
 ## Built With
 
 - [React](https://reactjs.org/)
