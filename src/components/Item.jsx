@@ -1,5 +1,6 @@
 import React from 'react'
 import './style/item.css'
+import { FaCartPlus } from 'react-icons/fa'
 
 function Item({data, add}) {
   return (
@@ -9,8 +10,8 @@ function Item({data, add}) {
         <img src={data.image} alt='img'/>
       </div>
       <div className='item-bot'>
-      <p>{data.price}$</p>
-      <button onClick={()=>{add(data)}}>Add to cart</button>
+      <p>${data.price}</p>
+      <button className="cartadd" onClick={()=>{add(data)}}><FaCartPlus/></button>
       </div>
     </div>
   )

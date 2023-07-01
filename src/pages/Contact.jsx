@@ -7,7 +7,7 @@ function Contact() {
   return (
     <div className='Contact'>
       <div className='link'>
-        <a href="https://github.com/yessimkhanuly13"><FaGithub className='icon'/></a>
+        <a href="https://github.com/yessimkhanuly13"><FaGithub/></a>
         <a href="https://github.com/yessimkhanuly13"><FaLinkedin/></a>
         <a href="https://github.com/yessimkhanuly13"><FaYoutube/></a>
         <a href="https://github.com/yessimkhanuly13"><FaTwitter/></a>

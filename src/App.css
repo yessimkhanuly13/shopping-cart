@@ -1,9 +1,17 @@
 .App {
   text-align: center;
+  display: flex;
+  align-items: center;
 }
+
 .btn-start{
   width: 20rem;
   height: 3rem;
   background-color: aliceblue;
   border-radius: 0.2rem;
+}
+
+.App img{
+  width: 40rem;
+  margin-right: 5rem;
 }

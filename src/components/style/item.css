@@ -7,9 +7,6 @@
     padding: 1rem;
     border: 0.1rem solid;
     border-radius: 0.4rem;
-}
-
-.Item button{
     background-color: aliceblue;
 }
 
@@ -26,5 +23,10 @@
 .item-bot{
     width: 20rem;
     height: 5rem;
+}
+
+.cartadd {
+    background-color: inherit;
+    border: none;
 }
 

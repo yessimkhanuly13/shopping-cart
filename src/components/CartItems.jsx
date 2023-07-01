@@ -9,7 +9,7 @@ function CartItems({data, removeFromCart, setTotal}) {
     const increment = () =>{
         // setTotal((prevTotal)=>prevTotal - amount * data.price)
         setCount(count+1);
-        setTotal((prevTotal)=> prevTotal + data.price)
+        setTotal((prevTotal)=> parseFloat((prevTotal + data.price).toFixed(2)))
         data.quantity++;
         // calcTotal(data.price);
     }
@@ -18,7 +18,7 @@ function CartItems({data, removeFromCart, setTotal}) {
             setCount(count-1);
             data.quantity--;
             console.log(data.quantity)
-            setTotal((prevTotal)=>prevTotal - data.price)
+            setTotal((prevTotal)=>parseFloat((prevTotal - data.price).toFixed(2)))
         }
         if(data.quantity < 1){
             removeFromCart(data)
